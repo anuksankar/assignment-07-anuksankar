@@ -14,6 +14,10 @@ ________________________________________________________________________________
 - In this assignment, you'll spin up a cluster with kafka, zookeeper, and spark containers and the mids container. We're adding consuming messages with spark to last week's activity.
 
 ### Follow the steps we did in class for the github data with the assessment data:
+with a few changes
+- You'll need to
+- come up with an appropriate name for your topic
+- use the right dataset name in your docker-compose exec command
 
 #### Get the data:
 
