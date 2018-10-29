@@ -25,21 +25,31 @@ The following is displayed:
 ```
 	Created topic "assessment-attempts".
 ```
-
+Check the topic
+```
 docker-compose exec kafka kafka-topics --describe --topic assessment-attempts --zookeeper zookeeper:32181
+```
+The following is displayed:
+```
 	Topic:assessment-attempts       PartitionCount:1        ReplicationFactor:1    Configs:
         Topic: assessment-attempts      Partition: 0    Leader: 1       Replicas: 1     Isr: 1
-
-
-
+```
+Check out messages
+```
 docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json"
 
 docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.'"
 
 docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
-
+```
+Publish messages
+```
 docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessment-attempts && echo 'Produced 100 messages.'"
+```
+The following is displayed
+```
 	Produced 100 messages.
+```
 
 
 docker-compose exec spark pyspark
