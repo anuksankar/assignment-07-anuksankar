@@ -1,7 +1,30 @@
+## W205 - Assignment 7 - Setup Pipeline
 
+### Spark Stack with Kafka
+
+Setup - As we have already created a directory ~/w205/spark-with-kafka in class, just cd into it for the assignment.
+```
+cd ~/w205/spark-with-kafka
+
+cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+```
+
+Spin up the cluster in one session and then check the logs in another session.
+```
+docker-compose up -d
+
+docker-compose logs -f kafka
+```
+
+Create a topic - "assessment-attempts"
+```
 docker-compose exec kafka kafka-topics --create --topic assessment-attempts --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
-	Created topic "assessment-attempts".
+```
 
+The following is displayed:
+```
+	Created topic "assessment-attempts".
+```
 
 docker-compose exec kafka kafka-topics --describe --topic assessment-attempts --zookeeper zookeeper:32181
 	Topic:assessment-attempts       PartitionCount:1        ReplicationFactor:1    Configs:
