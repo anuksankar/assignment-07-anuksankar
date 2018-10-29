@@ -1,0 +1,845 @@
+    1  docker images
+    2  docker pull midsw205/base
+    3  clear
+    4  docker images
+    5  who
+    6  ls
+    7  ls -l
+    8  ls
+    9  pwd
+   10  cd /
+   11  pwd
+   12  cd /usr/local/bin
+   13  ls
+   14  cd tmp
+   15  cd
+   16  pwd
+   17  cd ~/junk
+   18  ls
+   19  ls -l
+   20  mkdir w205
+   21  ls -l
+   22  docker images
+   23  docker run -it --rm -v /home/science/w205:/w205
+   24  midsw205/base:latest bash
+   25  exit
+   26  ls
+   27  cd w205
+   28  git clone https://github.com/mids-w205-crook/course-content.git
+   29  ls
+   30  ls -l
+   31  git clone https://github.com/mids-w205-crook/assignment-00-anuksankar.git
+   32  ls -l
+   33  cd  assignment-00-anuksankar
+   34  ls
+   35  vi README.md
+   36  cat README.md
+   37  git status
+   38  git add .
+   39  git status
+   40  git commit 
+   41  git commit -m 'my new readme'
+   42  git config --global user.email "anu.k.sankar@berkeley.edu"
+   43  git config --global user.name "anuksankar"
+   44  git commit -m 'my new readme'
+   45  git push
+   46  ls
+   47  cd w205
+   48  ls
+   49  ls -l
+   50  cd assignment-00-anuksankar
+   51  ls -l
+   52  cd ..
+   53  git clone https://github.com/mids-w205-crook/assignment-01-anuksankar.git 
+   54  ls -l
+   55  cd assignment-01-anuksankar
+   56  ls -l
+   57  vi README.md
+   58  ls -l
+   59  cd w205
+   60  ls -l
+   61  cd assignment-01-anuksankar
+   62  ls -l
+   63  vi README.md
+   64  ls -l
+   65  git status
+   66  git add .
+   67  git status
+   68  git commit -m "completed hw-01"
+   69  git status
+   70  git push origin master
+   71  exit
+   72  cd w205
+   73  ls
+   74  git clone https://github.com/mids-w205-crook/assignment-02-anuksankar.git
+   75  ls -l
+   76  vi  assignment-02-anuksankar
+   77  cd assignment-02-anuksankar
+   78  ls -l
+   79  vi REDME.md
+   80  ls -l
+   81  vi README.md
+   82  cat README.md
+   83  vi README.md
+   84  cd w205
+   85  ls -l
+   86  cd assignment-02-anuksankar
+   87  cd w205
+   88  ls -l
+   89  cd assignment-02-anuksankar
+   90  ls
+   91  cat README.md
+   92  cd w205
+   93  ls -l
+   94  cd assignment-02-anuksankar
+   95  vi README.md
+   96  git status
+   97  git add .
+   98  git status
+   99  git commit -m "Completed hw2"
+  100  git push origin master
+  101  cd w205
+  102  cd assignment-02-anuksankar
+  103  cat README.md
+  104  vi README.md
+  105  docker ps -a
+  106  ls
+  107  cd 205
+  108  cd w205
+  109  sudo chown -R science:science w205
+  110  cd ~/w205/course-content
+  111  git pull --all
+  112  cd ~/w205
+  113  curl -L -o annot_fpid.json https://goo.gl/rcickz
+  114  curl -L -o lp_data.csv https://goo.gl/rks6h3
+  115  head lp_data.csv
+  116  tail lp_data.csv
+  117  cat lp_data.csv | wc -l
+  118  cat lp_data.csv | sort
+  119  an sort
+  120  man sort
+  121  cat lp_data.csv | sort -g
+  122  cat lp_data.csv | sort -n
+  123  head annot_fpid.json
+  124  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  125  docker ps -a
+  126  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  127  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  128  exit
+  129  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  130  ps -a
+  131  exit
+  132  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  133  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  134  docker ps -a
+  135  docker rm -f unruffled_stonebraker
+  136  docker ps -a
+  137  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  138  cd w205
+  139  ls -l
+  140  git clone https://github.com/mids-w205-crook/assignment-03-anuksankar.git
+  141  ls -l
+  142  cd assignment-03-anuksankar
+  143  ls -l
+  144  git branch anuksankar_branch
+  145  git checkout anuksankar_branch
+  146  vi README.md
+  147  git add README.md
+  148  git commit -m "added branch and changed README"
+  149  git push origin anuksankar_branch
+  150  ls-l
+  151  ls -l
+  152  cd w205
+  153  ls -l
+  154  cd assignment-03-anuksankar
+  155  ls -l
+  156  vi README.md
+  157  exit
+  158  cd w205
+  159  ls -l
+  160  cd assignment-03-anuksankar
+  161  ls -l
+  162  vi README.md
+  163  exit
+  164  cd w205
+  165  ls -l
+  166  cd assignment-02-anuksankar
+  167  ls -l
+  168  cat README.md
+  169  assignment-02-anuksank+-----+
+  170  | f0_ |
+  171  +-----+
+  172  | 700 |
+  173  +-----+
+  174  exit
+  175  cd w205
+  176  bq query --use_legacy_sql=false '
+  177      SELECT count(*)
+  178      FROM
+  179         `bigquery-public-data.san_francisco.bikeshare_trips`'
+  180  docker run -it --rm -v ~/w205:/w205 midsw205/base pwd
+  181  docker run -it --rm -v ~/w205:/w205 midsw205/base
+  182  docker run -it --rm -v ~/w205:/w205 midsw205/base
+  183  cd w205
+  184  docker run -it --rm -v ~/w205:/w205 midsw205/base
+  185  cd w205
+  186  ls -l
+  187  cd assignment-03-anuksankar
+  188  ls -l
+  189  vi README.md
+  190  cd w205
+  191  docker run -it --rm -v ~/w205:/w205 midsw205/base
+  192  exit
+  193  cd w205
+  194  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  195  exit
+  196  cd w205
+  197  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  198  exit
+  199  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  200  exit
+  201  cd w205
+  202  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  203  cd w205
+  204  ls -l
+  205  git checkout anuksankar_branch
+  206  docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+  207  exit
+  208  cd w205
+  209  gcloud
+  210  gcloud --help
+  211  gcloud --version
+  212  sudo chown -R science:science ~/w205
+  213  cd ~/w205/course-content
+  214  git pull --all
+  215  cd
+  216  docker run redis
+  217  docker run -d --name redis -p 6379:6379 redis
+  218  docker rm -f redis
+  219  mkdir ~/w205/redis-standalone
+  220  cd ~/w205/redis-standalone
+  221  cp ../course-content/05-Storing-Data-II/example-0-docker-compose.yml docker-compose.yml
+  222  docker-compose up -d
+  223  docker-compose ps
+  224  docker-compose logs redis
+  225  docker-compose down
+  226  docker-compose ps
+  227  docker ps -a
+  228  mkdir ~/w205/redis-cluster
+  229  cd ~/w205/redis-cluster
+  230  cp ../course-content/05-Storing-Data-II/example-1-docker-compose.yml docker-compose.yml
+  231  docker-compose up -d
+  232  docker-compose ps
+  233  docker ps -a
+  234  docker-compose logs redis
+  235  docker-compose exec mids bash
+  236  docker-compose down
+  237  docker-compose ps
+  238  cp ../course-content/05-Storing-Data-II/example-2-docker-compose.yml docker-compose.yml
+  239  docker-compose up -d
+  240  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  241  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 104.248.72.233 --allow-root
+  242  docker ps -a
+  243  docker rm -f $(docker ps -aq)
+  244  cat docker
+  245  cat docker-compose.yml 
+  246  docker-compose up -d
+  247  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  248  docker-compose down
+  249  docker ps -a
+  250  cp ../course-content/05-Storing-Data-II/example-3-docker-compose.yml docker-compose.yml
+  251  docker compose up -d
+  252  cat docker-compose.yml 
+  253  docker-compose logs mids
+  254  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  255  docker-compose down
+  256  exit
+  257  docker ps -a
+  258  docker rm -f 9f0519fe8e9a
+  259  docker ps -a
+  260  exit
+  261  docker-compose up -d
+  262  cd w205
+  263  curl -L -o trips.csv https://goo.gl/QvHLKe
+  264  docker-compose up -d
+  265  docker-compose down
+  266  cd 
+  267  cp ../course-content/05-Storing-Data-II/example-4-docker-compose.yml docker-compose.yml
+  268  cd w205
+  269  cp ../course-content/05-Storing-Data-II/example-4-docker-compose.yml docker-compose.yml
+  270  docker-compose down
+  271  exit
+  272  cd w205
+  273  git clone https://github.com/mids-w205-crook/assignment-04-anuksankar.git
+  274  ls -l
+  275  cd  assignment-04-anuksankar
+  276  ls -l
+  277  nano ~/.bashrc
+  278  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  279  git branch anuksankar_hw4_branch
+  280  ls -l
+  281  git branch
+  282  git checkout anuksankar_hw4_branch
+  283  cd anuksankar_hw4_branch
+  284  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  285  cd w205
+  286  docker ps -a
+  287  docker container ls -a
+  288  docker images
+  289  cls
+  290  clear screen
+  291  docker ps -a
+  292  ls -l
+  293  cd  assignment-04-anuksankar
+  294  git status
+  295  ls -l
+  296  docker ps -a
+  297  docker rm -f 90e21760f247
+  298  cd 
+  299  pwd
+  300  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  301  cd w205
+  302  ls -l
+  303  cd assignment-04-anuksankar
+  304  git branch
+  305  sudo chown -R science:science ~/w205
+  306  git status
+  307  git add 
+  308  git addanuksankar_hw4_notebook.ipynb
+  309  git add anuksankar_hw4_notebook.ipynb
+  310  git status
+  311  git commit -m "initial push"
+  312  git push origin anuksankar_hw4_branch
+  313  docker ps -a
+  314  docker rm -f 2c369e2849e8
+  315  cd w205
+  316  ls -l
+  317  cd assignment-04-anuksankar
+  318  ls -l
+  319  git branch
+  320  git checkout anuksankar_hw4_branch
+  321  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  322  cd w205
+  323  docker ps -a
+  324  docker rm -f 29963f61b19c
+  325  docker ps
+  326  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  327  exit
+  328  cd w205
+  329  docker ps -a
+  330  docker run -it --rm -p 8888:8888 -v ~/w205:/w205 midsw205/base bash
+  331  git status
+  332  exit
+  333  cd w205
+  334  ls -l
+  335  cd 1: Charge \$3 for the first 30 mins (as per current charges) and charge $2 every additional 30 mins.
+  336  2: Offer loyalty points.  Every trip is counted as 1 point.  When customer earns 200 points, they can get 1 month free subscription.
+  337  cd assignment-04-anuksankar
+  338  git status
+  339  git add .
+  340  git status
+  341  git commit -m "completed hw4"
+  342  git push origin anuksankar_hw4_branch
+  343  exit
+  344  exit
+  345  sudo chown -R science:science ~/w205
+  346  cd ~/w205/course-content
+  347  git pull --all
+  348  cd 
+  349  docker ps -a
+  350  docker rm -f $(docker ps -aq)
+  351  exit
+  352  cd w205
+  353  cd kafka
+  354  docker-compose logs -f kafka
+  355  exit
+  356  cd w205
+  357  science@w205s2-crook-10:~/w205$
+  358  sudo chown -R science:science ~/w205
+  359  cd ~/w205/course-content
+  360  git pull --all
+  361  cd
+  362  docker ps -a
+  363  docker pull midsw205/base:latest
+  364  mkdir ~/w205/kafka
+  365  cd ~/w205/kafka
+  366  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  367  vi docker-compose.yml
+  368  rm docker-compose.yml
+  369  vi docker-compose.yml
+  370  docker-compose up -d
+  371  docker-compose ps
+  372  docker-compose logs zookeeper | grep -i binding
+  373  docker-compose logs kafka | grep -i started
+  374  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:32181
+  375  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper localhost:32181
+  376  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list localhost:29092 --topic foo && echo 'Produced 42 messages.'"
+  377  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 42
+  378  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 5
+  379  docker-compose down
+  380  docker ps -a
+  381  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  382  vi docker-compose.yml
+  383  cd ~/w205/kafka/
+  384  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  385  head -20 github-example-large.json
+  386  docker-compose up -d
+  387  docker-compose ps
+  388  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  389  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  390  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json"
+  391  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.'"
+  392  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c"
+  393  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  394  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 42
+  395  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e"
+  396  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e" | wc -l
+  397  docker ps
+  398  docker-compose down
+  399  docker-compose ps
+  400  docker ps
+  401  docker ps -a
+  402  exit
+  403  docker-compose exec mids bash
+  404  exit
+  405  docker ps -a
+  406  docker rm -f xxxxx
+  407  docker rm -f pedantic_poincare
+  408  docker ps -a
+  409  docker rm -f b65e4bf8cbec
+  410  docker ps -a
+  411  docker rm -f redis
+  412  docker ps -a
+  413  docker rm -f redis
+  414  docker-compose up -d
+  415  cd w205
+  416  ls -l
+  417  cd redis-standalone
+  418  ls -l
+  419  vi docker-compose.yml
+  420  docker-compose ps
+  421  docker-compose logs redis
+  422  docker-compose down
+  423  docker-compose ps
+  424  docker ps -a
+  425  cd ~/w205/redis-cluster
+  426  ls -l
+  427  vi docker-compose.yml
+  428  docker ps -a
+  429  sudo chown -R science:science ~/w205
+  430  cd ~/w205/course-content
+  431  git pull --all
+  432  cd
+  433  docker ps -a
+  434  docker rm -f $(docker ps -aq)
+  435  docker pull midsw205/base:latest
+  436  docker pull redis
+  437  docker run redis
+  438  docker run -d redis
+  439  docker run -d --name redis redis
+  440  docker run -d --name redis -p 6379:6379 redis
+  441  cd ~/w205/redis-standalone
+  442  cp ../course-content/05-Storing-Data-II/example-0-docker-compose.yml docker-compose.yml
+  443  docker-compose up -d
+  444  ipython
+  445  cd ~/w205/redis-cluster
+  446  cp ../course-content/05-Storing-Data-II/example-1-docker-compose.yml docker-compose.yml
+  447  docker-compose up -d
+  448  docker-compose ps
+  449  docker-compose ps -a
+  450  docker ps -a
+  451  docker-compose logs redis
+  452  docker-compose exec mids bash
+  453  docker-compose down
+  454  docker-compose ps
+  455  cp ../course-content/05-Storing-Data-II/example-2-docker-compose.yml docker-compose.yml
+  456  docker-compose up -d
+  457  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  458  cd w205
+  459  docker ps -a
+  460  ls -l
+  461  cd redis-cluster
+  462  docker-compose down
+  463  cp ../course-content/05-Storing-Data-II/example-3-docker-compose.yml docker-compose.yml
+  464  docker-compose up -d
+  465  ls -l ..
+  466  cat Anu_Jupyter_NB1.ipynb
+  467  docker-compose down
+  468  docker-compose ps
+  469  docker ps -a
+  470  cd ~/w205/
+  471  curl -L -o trips.csv https://goo.gl/QvHLKe
+  472  ls -l
+  473  head trips.csv
+  474  ls -l
+  475  cd redis-cluster
+  476  ls -l
+  477  docker-compose up -d
+  478  docker-compose down
+  479  cp ../course-content/05-Storing-Data-II/example-4-docker-compose.yml docker-compose.yml
+  480  cd ~/w205/
+  481  curl -L -o trips.csv https://goo.gl/QvHLKe
+  482  docker-compose up -d
+  483  ls -l
+  484  cd redis-cluster
+  485  docker-compose up -d
+  486  history
+  487  cd w205
+  488  ls
+  489  cd  redis-cluster
+  490  ls -l
+  491  vi docker-compose.ym;
+  492  vi docker-compose.yml
+  493  docker ps -a
+  494  vi docker-compose.yml
+  495  docker-compose logs mids
+  496  ls -l
+  497  vi  docker-compose.yml
+  498  docker-compose logs mids
+  499  cd ..
+  500  ls -l
+  501  git clone https://github.com/mids-w205-crook/assignment-05-anuksankar.git
+  502  ls -l
+  503  cd assignment-05-anuksankar
+  504  ls -l
+  505  git branch anuksankar_hw5_branch
+  506  git checkout anuksankar_hw5_branch
+  507  git status
+  508  ls -l
+  509  git status
+  510  history
+  511  cd w205
+  512  ls -l
+  513  cd redis-cluster
+  514  ls -l
+  515  docker ps -a
+  516  docker-compose down
+  517  exit
+  518  cd w205
+  519  ls -l
+  520  git status
+  521  cd assignment-05-anuksankar
+  522  ls -l
+  523  git status
+  524  git add .
+  525  git status
+  526  git commit -m "completed hw5 - redis and python"
+  527  git push anuksankar_hw5_branch
+  528  cd anuksankar_hw5_branch
+  529  git branch
+  530  git checkout anuksankar_hw5_branch
+  531  git push origin anuksankar_hw5_branch
+  532  exit
+  533  cd w205
+  534  cd w205
+  535  sudo chown -R science:science ~/w205
+  536  cd ~/w205/course-content
+  537  git pull --all
+  538  cd 
+  539  docker ps -a
+  540  docker pull midsw205/base:latest
+  541  docker pull redis
+  542  docker pull confluentinc/cp-zookeeper:latest
+  543  docker pull confluentinc/cp-kafka:latest
+  544  docker pull midsw205/spark-python:0.0.5
+  545  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  546  ls -l
+  547  cd ~/w205/kafka
+  548  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  549  ls -l
+  550  vi docker-compose.yml
+  551  head -20 assessment-attempts-20180128-121051-nested.json
+  552  ls -l
+  553  head  github-example-large.json
+  554  head assessment-attempts-20180128-121051-nested.json
+  555  docker-compose up -d
+  556  docker images
+  557  mkdir ~/w205/spark-with-kafka
+  558  cd ~/w205/spark-with-kafka
+  559  cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+  560  docker-compose up -d
+  561  ls -l
+  562  vi docker-compose.yml
+  563  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  564  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  565  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list kafka:29092 --topic foo && echo 'Produced 42 messages.'"
+  566  docker-compose exec spark pyspark
+  567  cd ~/w205
+  568  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  569  cd ~/w205/spark-with-kafka
+  570  ls -l
+  571  cd ~/w205/spark-with-kafka
+  572  docker-compose up -d
+  573  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  574  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  575  docker-compose exec mids bash -c "cat /w205/github-example-large.json"
+  576  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.'"
+  577  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c"
+  578  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  579  docker-compose exec spark pyspark
+  580  docker-compose down
+  581  docker-compose ps
+  582  docker ps -a
+  583  exit
+  584  cd w205
+  585  ls -l
+  586  cd spark-with-kafka
+  587  ls -l
+  588  docker-compose logs -f kafka
+  589  docker-compose down
+  590  docker-compose logs -f kafka
+  591  exit
+  592  cd w205
+  593  ls -l
+  594  cd assignment-06-anuksankar
+  595  ls -l
+  596  cd kafka
+  597  ls -l
+  598  vi docker-compose.yml
+  599  exit() exit
+  600  exit
+  601  cd w205
+  602  ls -l
+  603  cd assignment-06-anuksankar
+  604  ls -l
+  605  cd kafka
+  606  ls -l
+  607  vi docker-compose.yml
+  608  docker-compose logs -f kafka
+  609  exit
+  610  cd w205
+  611  ls -l
+  612  cd assignment-05-anuksankar
+  613  ls -l
+  614  cd 
+  615  cd w205
+  616  cd 
+  617  sudo chown -R science:science ~/w205
+  618  cd ~/w205/course-content
+  619  git pull --all
+  620  cd 
+  621  docker ps -a
+  622  docker rm -f $(docker ps -aq)
+  623  docker ps -a
+  624  docker pull midsw205/base:latest
+  625  docker pull redis
+  626  docker pull confluentinc/cp-zookeeper:latest
+  627  docker pull confluentinc/cp-kafka:latest
+  628  docker pull midsw205/spark-python:0.0.5
+  629  cd w205
+  630  ls -l
+  631  git pull https://github.com/mids-w205-crook/assignment-06-anuksankar.git
+  632  git clone https://github.com/mids-w205-crook/assignment-06-anuksankar.git
+  633  ls -l
+  634  cd assignment-06-anuksankar
+  635  cd ~/assignment-04-anuksankar
+  636  cd ../assignment-04-anuksankar
+  637  ls -l
+  638  git branch
+  639  cd ../assignment-05-anuksankar
+  640  git branch
+  641  cd ../assignment-06-anuksankar
+  642  ls -l
+  643  git branch anuksankar_hw6_branch
+  644  git checkout anuksankar_hw6_branch
+  645  mkdir kafka
+  646  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/assignment-06-anuksankar/kafka/
+  647  ls -l
+  648  cd kafka
+  649  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  650  ls -l
+  651  cd ..
+  652  ls -l
+  653  git branch
+  654  cd assignment-06-anuksankar
+  655  git branch
+  656  git checkout anuksankar_hw6_branch
+  657  cd kafka
+  658  ls -l
+  659  docker-compose up -d
+  660  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  661  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  662  docker-compose exec mids bash -c "cat /w205/assignment-06-anuksankar/kafka/assessment-attempts-20180128-121051-nested.json"
+  663  docker-compose exec mids bash -c "cat /w205/assignment-06-anuksankar/kafka/assessment-attempts-20180128-121051-nested.json | jq '.'"
+  664  docker-compose exec mids bash -c "cat /w205/assignment-06-anuksankar/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+  665  docker-compose exec mids bash -c "cat /w205/assignment-06-anuksankar/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  666  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e"
+  667  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 42
+  668  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e" | wc -l
+  669  docker-compose down
+  670  history> history.txt
+  671  ls -l
+  672  cat history.txt
+  673  git status
+  674  cd ..
+  675  git status
+  676  ls -l
+  677  cd kafka
+  678  ls -l
+  679  mv history.txt ../history.txt
+  680  ls -l
+  681  cd ..
+  682  ls -l
+  683  git status
+  684  cd ..
+  685  ls -l
+  686  cd assignment-05-anuksankar
+  687  ls -l
+  688  vi anuksankar-annotations.md.ipynb
+  689  ls -l
+  690  cd ../ assignment-06-anuksankar
+  691  cd assignment-06-anuksankar
+  692  ls -l
+  693  mv history.txt anuksankar-history.txt
+  694  ls -l
+  695  cd kafka
+  696  ls -l
+  697  vi docker-compose.yml
+  698  git status
+  699  cd ..
+  700  git status
+  701  git add .
+  702  git status
+  703  cp anuksankar-history.txt anuksankar-annotations.md
+  704  ls -l
+  705  vi anuksankar-annotations.md
+  706  git status
+  707  git add .
+  708  git status
+  709  vi htmartin-annotations.md
+  710  git commit -m "hw6 first commit"
+  711  git branch
+  712  git push anuksankar_hw6_branch
+  713  git push origin anuksankar_hw6_branch
+  714  cd ..
+  715  git status
+  716  cd assignment-06-anuksankar
+  717  git status
+  718  git push origin  anuksankar_hw6_branch
+  719  exit
+  720  cd w205
+  721  ls -l
+  722  cd assignment-06-anuksankar
+  723  ls -l
+  724  cat htmartin-annotations.md
+  725  ls -l
+  726  vi anuksankar-annotations.md
+  727  vi  htmartin-annotations.md
+  728  vi anuksankar-annotations.md
+  729  git status
+  730  git add .
+  731  git commit -m "hw6 2nd commit"
+  732  git add .
+  733  git commit -m "hw6 2nd commit"
+  734  git status
+  735  ls -l
+  736  git status
+  737  vi anuksankar-annotations.md
+  738  git commit -m "completed hw6"
+  739  git push origin anuksankar_hw6_branch
+  740  cd w205
+  741  ls -l
+  742  cd assignment-05-anuksankar
+  743  ls -l
+  744  vi anuksankar-annotations.md.ipynb
+  745  cd w205
+  746  sudo chown -R science:science ~/w205
+  747  cd ~/w205/course-content
+  748  git pull --all
+  749  docker ps -a
+  750  git pull --all
+  751  exit
+  752  cd ~/w205/spark-with-kafka-and-hdfs
+  753  docker-compose exec spark pyspark
+  754  exit
+  755  cd w205
+  756  docker-compose logs -f kafka
+  757  cd ~/w205/spark-with-kafka-and-hdfs
+  758  docker-compose logs -f kafka
+  759  exit
+  760  cd ~/w205/spark-with-kafka-and-hdfs
+  761  exit
+  762  docker pull midsw205/base:latest
+  763  docker pull redis
+  764  docker pull confluentinc/cp-zookeeper:latest
+  765  docker pull confluentinc/cp-kafka:latest
+  766  docker pull midsw205/spark-python:0.0.5
+  767  docker pull midsw205/cdh-minimal:latest
+  768  mkdir ~/w205/spark-with-kafka-and-hdfs
+  769  cd ~/w205/spark-with-kafka-and-hdfs
+  770  cp ~/w205/course-content/08-Querying-Data/docker-compose.yml .
+  771  docker-compose up -d
+  772  docker-compose logs -f kafka
+  773  docker-compose exec cloudera hadoop fs -ls /tmp/
+  774  docker-compose exec kafka kafka-topics --create --topic players --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  775  cd ~/w205
+  776  curl -L -o players.json https://goo.gl/vsuCpZ
+  777  ls -l
+  778  cat players.json
+  779  cd ~/w205/spark-with-kafka-and-hdfs
+  780  docker-compose exec mids bash -c "cat /w205/players.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t players"
+  781  ls -l /tmp/
+  782  docker-compose exec cloudera hadoop fs -ls /tmp/
+  783  docker-compose exec cloudera hadoop fs -ls /tmp/players/
+  784  docker-compose exec kafka kafka-topics --create --topic commits --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  785  cd ~/w205
+  786  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  787  head github-example-large.json
+  788  cd ~/w205/spark-with-kafka-and-hdfs
+  789  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t commits"
+  790  docker-compose exec cloudera hadoop fs -ls /tmp/
+  791  cd  /tmp/some_commit_info
+  792  ls -l
+  793  docker-compose exec cloudera hadoop fs -ls /tmp/
+  794  docker-compose exec cloudera hadoop fs -ls /tmp/commits/
+  795  docker-compose down
+  796  exit
+  797  docker-compose logs -f kafka
+  798  cd ~/w205/spark-with-kafka
+  799  docker-compose logs -f kafka
+  800  cd w205
+  801  cd spark-with-kafka
+  802  ls -ls
+  803  ls -l
+  804  https://www.ritchieng.com/machine-learning-multinomial-naive-bayes-vectorization
+  805  docker-compose logs -f kafka
+  806  cd w205
+  807  ls -l
+  808  git status
+  809  git clone https://github.com/mids-w205-crook/assignment-07-anuksankar.git
+  810  ls -l
+  811  git clone https://github.com/mids-w205-crook/assignment-08-anuksankar.git
+  812  ls -l
+  813  sudo chown -R science:science ~/w205
+  814  cd ~/w205/course-content
+  815  git pull --all
+  816  cd
+  817  docker ps -a
+  818  docker pull midsw205/base:latest
+  819  docker pull redis
+  820  docker pull confluentinc/cp-zookeeper:latest
+  821  docker pull confluentinc/cp-kafka:latest
+  822  docker pull midsw205/spark-python:0.0.5
+  823  docker pull midsw205/cdh-minimal:latest
+  824  cd ~/w205/spark-with-kafka
+  825  cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+  826  docker-compose up -d
+  827  cd ~/w205
+  828  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  829  cd ~/w205/spark-with-kafka
+  830  docker ps -a
+  831  cd w205
+  832  docker ps -a
+  833  docker rm -f $(docker ps -aq)
+  834  docker ps -a
+  835  cd ~/w205/spark-with-kafka
+  836  cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+  837  docker-compose up -d
+  838  docker-compose exec kafka kafka-topics --create --topic assessment-attempts --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  839  docker-compose exec kafka kafka-topics --describe --topic assessment-attempts --zookeeper zookeeper:32181
+  840  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json"
+  841  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.'"
+  842  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+  843  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessment-attempts && echo 'Produced 100 messages.'"
+  844  docker-compose exec spark pyspark
+  845  history > anuksankar-history.txt
