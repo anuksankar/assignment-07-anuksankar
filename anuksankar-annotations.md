@@ -164,5 +164,10 @@ print(first_message['sequences']['questions'][0]['options'][0]['at'])
 ```
 2018-01-23T14:23:24.670Z
 
+Exit Spark and Tear down the cluster
+```
+exit()
 
+docker-compose down
+```
 
