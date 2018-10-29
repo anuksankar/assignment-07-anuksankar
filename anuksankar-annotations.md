@@ -141,13 +141,17 @@ Unrolling json
 messages_as_strings.select('value').take(1)
 
 messages_as_strings.select('value').take(1)[0].value
+```
 
+```
 import json
 
 first_message=json.loads(messages_as_strings.select('value').take(1)[0].value)
 
 first_message
+```
 
+```
 print(first_message['sequences']['counts']['total'])
 ```
 4
