@@ -104,6 +104,7 @@ Take a look at the values
 messages_as_strings.show()
 ```
 Results
+```
 +----+--------------------+
 | key|               value|
 +----+--------------------+
@@ -148,13 +149,16 @@ first_message=json.loads(messages_as_strings.select('value').take(1)[0].value)
 first_message
 
 print(first_message['sequences']['counts']['total'])
-4
-
-print(first_message['sequences']['questions'][0]['options'][0]['checked'])
-True
-
-print(first_message['sequences']['questions'][0]['options'][0]['at'])
-2018-01-23T14:23:24.670Z
 ```
+4
+```
+print(first_message['sequences']['questions'][0]['options'][0]['checked'])
+```
+True
+```
+print(first_message['sequences']['questions'][0]['options'][0]['at'])
+```
+2018-01-23T14:23:24.670Z
+
 
 
